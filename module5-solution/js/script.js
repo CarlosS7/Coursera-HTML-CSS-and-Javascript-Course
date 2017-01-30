@@ -15,11 +15,11 @@ var dc = {};
 
 var homeHtmlUrl = "snippets/home-snippet.html";
 var allCategoriesUrl = 
-  "http://davids-restaurant.herokuapp.com/categories.json";
+  "https://davids-restaurant.herokuapp.com/categories.json";
 var categoriesTitleHtml = "snippets/categories-title-snippet.html";
 var categoryHtml = "snippets/category-snippet.html";
 var menuItemsUrl = 
-  "http://davids-restaurant.herokuapp.com/menu_items.json?category=";
+  "https://davids-restaurant.herokuapp.com/menu_items.json?category=";
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
 
@@ -114,7 +114,7 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       chosenCategoryShortName = "'" + chosenCategoryShortName + "'";
-      var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml, 'randomCategoryShortName', 'chosenCategoryShortName')
+      var homeHtmlToInsertIntoMainPage = insertProperty('randomCategoryShortName', chosenCategoryShortName)
 
       // TODO: STEP 4: Insert the the produced HTML in STEP 3 into the main page
       // Use the existing insertHtml function for that purpose. Look through this code for an example
